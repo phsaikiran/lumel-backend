@@ -9,18 +9,20 @@
 
 # APIs
 
-| Method | URL       | Request | Response                    |
-|--------|-----------|--------------|-----------------------------|
-| GET    | /load-csv | None | SUCCESS \| PARTIAL \| ERROR 
-| GET    | /totalCustomers         | startDate, endDate | {"error": "","count": 2}    |
-| GET    | /totalOrders         | startDate, endDate | {"error": "","count": 3}    |
+| Method | URL             | Request            | Response                    |
+|--------|-----------------|--------------------|-----------------------------|
+| GET    | /loadCSV        | None               | SUCCESS \| PARTIAL \| ERROR |
+| GET    | /totalCustomers | startDate, endDate | {"error": "","count": 2}    |
+| GET    | /totalOrders    | startDate, endDate | {"error": "","count": 3}    |
 
 
+# Example
 GET /load-csv
-[Example: http://localhost:8080/load-csv](http://localhost:8080/load-csv)
+
+[Example: http://localhost:8080/loadCSV](http://localhost:8080/loadCSV)
 
 
+# Instructions to run
+- Need Java 17
 
-# Instructions to run (Windows)
-
-```./mvnw clean install```
+```./mvnw spring-boot:run```
