@@ -13,4 +13,7 @@ public interface OrderRepository extends JpaRepository<Order, String> {
 
     @Query("SELECT COUNT(o.id) FROM Order o WHERE :startDate <= o.dateOfSale AND :endDate >= o.dateOfSale")
     Integer getOrderCountBetweenDateOfSale(LocalDate startDate, LocalDate endDate);
+
+    @Query("SELECT o FROM Order o WHERE :startDate <= o.dateOfSale AND :endDate >= o.dateOfSale")
+    List<Order> getOrderBetweenDateOfSale(LocalDate startDate, LocalDate endDate);
 }
